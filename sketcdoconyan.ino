@@ -32,7 +32,7 @@ http://www.telomere0101.site/archives/post-1008.html
 #include "DHT12.h"
 #include <WiFi.h>
 #include <HTTPClient.h>
-#include <env_set.h>      //SSID_NAME, SSID_PASS, GAS_WEBAP_ADR
+#include <env_set.h>      //SSID_NAME, SSID_PASS, GAS_WEBAP_ADR, CYC_TIME(unit msec)
 
 DHT12 dht12; //Preset scale CELSIUS and ID 0x5c.
 
