@@ -3,9 +3,8 @@
 
 M5Stick-C用のArduinoソース<br>Google App Script(GAS)にデータをupload<br>GAS側でSpreadSheetに展開<br>WiFiのSSIDやPASSWORD, GASのWeb Applicationの情報は.zipでライブラリとして外部に配置(env_set.zip)<br>
 
-[rev 0.1.2]<bar>
-# Build: Central(Doco_Cent), Peripheral(Doco_Peri) 
-#### CENTRAL's Specification<bar>
+### **Build: Central(Doco_Cent), Peripheral(Doco_Peri)** <bar> 
+#### <u>CENTRAL's Specification</u> <bar>
 ##### Data Flow
 1. Receive Data from "Specific UUID's"  PERIPHERAL<bar>
 2. Stored: RSSI, Major, Minor data from PERIPHERAL.
@@ -28,14 +27,19 @@ centr_data_Mj, centr_data_Mi,peri_data_Mj, peri_data_Mi, peri_data_RSSI<bar>
 * Doco_Cent: BLE Central<bar>
 * Doco_Peri: BLE Peripheral<bar>
 
+### [rev 0.1.3]<bar>
+* Support: Redirect when connet to GAS
 
-[rev 0.1.1]<br>
+### [rev 0.1.2]<bar>
+* Build: Central(Doco_Cent), Peripheral(Doco_Peri)
+
+### [rev 0.1.1]<br>
 1. Defined: PERIPHERAL / CENTRAL mode
 2. Broadcast own Beacon as peripheral
 3. CENTRAL mode does not work as BLE CENTRAL
 3. Added BLE_setting_defh.h to configure BLE parameters
 
-[rev 0.1]<br>
+### [rev 0.1]<br>
 First design: To study the method of M5data(Temp, Humid) upload to GAS. <bar>
  
 
