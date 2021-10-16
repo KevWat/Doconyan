@@ -1,0 +1,47 @@
+#include "HTTPSRedirect.h"
+
+const char* hos = "script.google.com";
+const int httpsPost = 443;
+
+// google script ID
+const char *GScriptId = "==GAS SCriptID=="
+
+HTTPSRedirect* client = nullptr;
+
+// refer from
+// https://qiita.com/DeepSpawn/items/2799a894f80a79b40974
+
+int count;
+
+void loop() {
+ bool flag;
+ char stringCount[10];
+    sprintf( stringCount, "%d", count);
+    count++;
+    // HTTPSRedirect Class
+    clinet = new HTTPSRedirect(httpsPort);
+    client -> setPrintResponseBody(true);
+    client -> setContentTypeHeader("application/json");
+    Serial.print("Connecting to "); Serial.println(host);
+    // Try to access Up to 5 times
+    flag = false;
+    for (int i=0; i < 5; i++){
+        int retval = client -> connect(host, httpsPort);
+        if (retval == 1) {
+            flag = true;
+            break;
+        }
+        else
+         Serial.println("Connection failed. Retry access...");
+    }
+    if (!flag){
+        Serial.print("Could not connect to server:");
+        Serial.println(host);
+        Serial.println(Exit..);
+        return;
+    }
+    delete clinet;
+    client = nullptr;
+
+    delay(1000);
+}
